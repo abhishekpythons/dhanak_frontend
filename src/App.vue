@@ -1,29 +1,35 @@
 <template>
-  <NavBar />
-  <br> <br> <br>
+  <navBar />
+  <commingSoon />
   <div>
-    <eventsHeading />
+    <div class="subHeading">
+      <a href="/"><button >Events</button></a>
+    </div>
+    
     <div class="events">
       <EventsCard />
     </div>
   </div>
   <div>
-    <mentorsHeaing />
+    <div class="subHeading">
+      <a href="/"><button >Mentors</button></a>
+    </div>
     <div class="events">
       
     </div>
   </div>
   
-  <FooTer />
+  <fooTer />
 </template>
 
 <script setup>
 // import BackGround from './components/BackGround.vue'
   import EventsCard from './components/EventsCard.vue'
   import NavBar from './components/NavBar.vue'
-//import eventsHeading from './components/eventsHeading.vue'
-//import mentorsHeaing from './components/mentorsHeading.vue'
+  // import eventsHeading from './components/eventsHeading.vue'
+  // import mentorsHeaing from './components/mentorsHeading.vue'
   import FooTer from './components/FooTer.vue'
+  import commingSoon from './components/comingSoon.vue'
 </script>
 
 
@@ -51,4 +57,18 @@
   justify-items: center;
   margin: 20px;
 }
+
+.subHeading{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subHeading a{
+    
+    color: rgb(219, 138, 17);
+    font-size: 48px;
+     font-family:"Kamikaze3DGradient";
+  }
 </style>
