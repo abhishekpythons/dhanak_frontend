@@ -3,7 +3,7 @@ name: Build and Release Production
 on:
   push:
     branches:
-      - main  # Adjust this branch based on your default branch name
+      - master  # Adjust this branch based on your default branch name
 
 jobs:
   build:
