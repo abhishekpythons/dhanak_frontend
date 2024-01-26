@@ -1,0 +1,50 @@
+name: Build and Release Production
+
+on:
+  push:
+    branches:
+      - main  # Adjust this branch based on your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Production Version
+        run: npm run build
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Create Production Branch
+        run: git checkout -b production
+
+      - name: Copy Build to Production Branch
+        run: cp -r dist/* .
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "abhishekpythons@gmail.com"
+          git config --global user.name "abhishekpythons"
+
+      - name: Commit and Push to Production Branch
+        run: |
+          git add .
+          git commit -m "Release production version"
+          git push origin production
