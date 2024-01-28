@@ -18,7 +18,7 @@
       </div>
     </nav>
     </div> -->
-  <nav class="p-1" style="position: relative; top: 0px; width:100%;">
+  <nav class="p-1" style=" position: relative; top: 0px; width:100%;">
         <div class="container mx-auto flex items-center ">
 
             <!-- Navigation Links -->

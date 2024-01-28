@@ -1,13 +1,17 @@
 <template>
   <div class=" flex items-center justify-center">
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 mx-2 my-4">
       <!-- Event Cards -->
-      <div v-for="(event, index) in events" :key="index" class="event-card bg-white rounded-lg overflow-hidden shadow-lg mx-2 my-4">
-        <img :src="event.image" :alt="`Event ${index + 1}`" class="w-full h-40 object-cover">
-        <div class="p-4">
+      <div v-for="(event, index) in events" :key="index" class="event-card overflow-hidden mx-2 my-4">
+        <div class="eventImage">
+          <img src="./assets/dhanak_event.jpg" :alt="`Event ${index + 1}`" style="border-radius: 5%;" >
+        </div>
+        
+        <!-- <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">{{ event.title }}</h3>
           <p class="text-gray-700">{{ event.description }}</p>
-        </div>
+        </div> -->
+        
       </div>
     </div>
   </div>
@@ -21,7 +25,7 @@ export default {
         {
           title: 'Event 1',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in metus vehicula, id fringilla justo gravida.',
-          image: 'https://placekitten.com/300/200',
+          image: 'https://placekitten.com/301/200',
         },
         {
           title: 'Event 2',
@@ -53,10 +57,21 @@ export default {
 <style scoped>
 /* Additional Custom Styles */
 .event-card {
-  transition: transform 0.3s;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  
+  border-radius: 7%;
+  width: 18em;
+  height: 20em;
+  background-image: url(./assets/ipod.svg);
+  background-size: cover;
+  box-shadow:  5px 5px 7px #5a5a5a,
+             -5px -5px 7px #ffffff;
 }
-
-.event-card:hover {
-  transform: scale(1.05);
+.eventImage{
+  position: relative;
+  width: 70%;
+  
 }
 </style>

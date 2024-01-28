@@ -1,6 +1,10 @@
 <template>
   <navBar />
   <commingSoon />
+  <div class="flex items-center justify-center">
+    <dhanakLoader />
+  </div>
+  
   <div>
     <div class="subHeading">
       <a href="/"><button >Events</button></a>
@@ -29,6 +33,7 @@
   // import eventsHeading from './components/eventsHeading.vue'
   // import mentorsHeaing from './components/mentorsHeading.vue'
   import FooTer from './components/FooTer.vue'
+  import dhanakLoader from './components/dhanakLoader.vue'
   import commingSoon from './components/comingSoon.vue'
 </script>
 
@@ -41,8 +46,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: #0a0231; */
-  background-image: url(./components/assets/layered-waves-haikei.svg);
+  background-color:ghostwhite;
+  /* background-image: url(./components/assets/layered-waves-haikei.svg); */
   
   background-size:cover;
   color: #2c3e50;
