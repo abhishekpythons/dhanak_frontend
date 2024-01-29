@@ -1,12 +1,8 @@
 <template>
   <navBar />
   <commingSoon />
-  <div class="flex items-center justify-center">
-    <dhanakLoader />
-  </div>
-  
   <div>
-    <div class="subHeading">
+    <div class="subHeading mt-4">
       <a href="/"><button >Events</button></a>
     </div>
     
@@ -22,7 +18,7 @@
       
     </div>
   </div>
-  
+  <axiosTest />
   <fooTer />
 </template>
 
@@ -33,8 +29,8 @@
   // import eventsHeading from './components/eventsHeading.vue'
   // import mentorsHeaing from './components/mentorsHeading.vue'
   import FooTer from './components/FooTer.vue'
-  import dhanakLoader from './components/dhanakLoader.vue'
   import commingSoon from './components/comingSoon.vue'
+  import axiosTest from './components/axiosTest.vue'
 </script>
 
 
@@ -46,11 +42,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:ghostwhite;
+  /* background-color:ghostwhite; */
   /* background-image: url(./components/assets/layered-waves-haikei.svg); */
-  
-  background-size:cover;
-  color: #2c3e50;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #000000;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
 }
 #background{
   position: absolute;
@@ -71,9 +69,10 @@
   }
 
   .subHeading a{
-    
+    margin-top: 2rem;
     color: rgb(219, 138, 17);
     font-size: 48px;
      font-family:"Kamikaze3DGradient";
   }
+  
 </style>

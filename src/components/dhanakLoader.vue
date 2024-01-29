@@ -1,6 +1,10 @@
 <template>
     <div class="loader">
-   <div data-glitch="Loading..." class="glitch">Loading...</div>
+   <div data-glitch="Coming Soon... STAY TUNED!" class="glitch mt-4">
+        <h1>Coming Soon...</h1>
+        <h1>STAY TUNED!</h1>
+    </div>
+   <!-- <div data-glitch="STAY TUNED!" class="glitch mt-4">STAY TUNED!</div> -->
 </div>
 
 </template>
@@ -8,13 +12,16 @@
 <style scoped>
    .glitch {
   position: relative;
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   z-index: 1;
   animation: shift 1s ease-in-out infinite alternate;
+}
+h1{
+    font-size: 32px;
 }
 
 .glitch:before,

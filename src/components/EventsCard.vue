@@ -66,8 +66,7 @@ export default {
   height: 20em;
   background-image: url(./assets/ipod.svg);
   background-size: cover;
-  box-shadow:  5px 5px 7px #5a5a5a,
-             -5px -5px 7px #ffffff;
+  box-shadow: 0px 0px 40px #1C9C8C;
 }
 .eventImage{
   position: relative;

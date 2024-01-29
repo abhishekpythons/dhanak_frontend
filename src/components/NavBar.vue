@@ -23,14 +23,15 @@
 
             <!-- Navigation Links -->
             <div class="hidden md:flex items-center justify-evenly mt-12" style=" height: 12vh; width:100%;">
-              <a class="navbarLink" href="#events">  Events</a>
               <a class="navbarLink" href="#sponsors">Sponsors</a>
+              <a class="navbarLink" href="#sponsors">Mentors</a>
+              <a class="navbarLink" href="#events">  Events</a>
               <a href="">
                 <img height="140vh" width="130vh" src="./assets/dhanak_logo.png">
               </a>
-              
               <a  class="navbarLink" href="#signup">SignUp</a>
               <a class="navbarLink" href="#login">LogIn</a>       
+              <a class="navbarLink" href="#login">Merchandise</a>       
             </div>
 
             <!-- Hamburger Menu for Small Screens -->
@@ -39,17 +40,19 @@
                 <div style="width: 36px; height: 32px;">
                 </div>
                 
-                <a style="z-index: 0; !important">
-                  <img id="myClickableHeading" height="130vh" width="120vh" src="./assets/dhanak_logo.png">
+                <a href="#" style="z-index: 3; !important">
+                  <img height="130vh" width="120vh" src="./assets/dhanak_logo.png">
                 </a>
-                <button id="mobile-menu-btn" style="z-index: 3;" @click="toggleMobileMenu();"
+                  <button id="mobile-menu-btn" style=" z-index: 3;" @click="toggleMobileMenu();"
                     class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                    <svg class="h-8 w-9" fill="none" stroke="currentColor" viewBox="0 0 30 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
+                    <input id="checkbox" type="checkbox">
+    <label @click="toggleMobileMenu();" class="toggle" for="checkbox">
+        <div id="bar1" class="bars"></div>
+        <div id="bar2" class="bars"></div>
+        <div id="bar3" class="bars"></div>
+    </label>
                 </button>
+                
                   
                 
             </div>
@@ -57,14 +60,16 @@
     </nav>
 
     <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" v-show="isMobileMenuVisible"
-        class="md:hidden text-white left-20 right-0 transform transition-transform ease-in-out duration-300"
-        style="position: fixed; top: 0; height:100%; z-index: 2; background-color: rgb(16, 15, 15);">
-        <div class="mt-20"> 
-          <a href="#" class="block py-2 text-lg tracking-wide antialiased font-semibold" style=" color:#1C9C8C; ">Events</a>
-          <a href="#" class="block py-2 text-lg tracking-wide antialiased font-semibold" style=" color: #1C9C8C; ">Sponsor</a>
-          <a href="#" class="block py-2 text-lg tracking-wide antialiased font-semibold" style=" color: #1C9C8C;">Sign up</a>
-          <a href="#" class="block py-2 text-lg tracking-wide antialiased font-semibold" style=" color: #1C9C8C; ">Log in</a>
+    <div v-show="isMobileMenuVisible"
+        class=" md:hidden w-full left-0 right-0 grid items-center justify-center"
+        style=" position: absolute; top:0; height:100%; z-index: 2; background-color: rgb(0, 0, 0);">
+        <div class="grid"> 
+          <a class="mt-4 mobileNavbarLink" href="#">Sign up</a>
+          <a class="mt-4 mobileNavbarLink" href="#">Mentors</a>
+          <a class="mt-4 mobileNavbarLink" href="#">Events</a>
+          <a class="mt-4 mobileNavbarLink" href="#">Log in</a>
+          <a class="mt-4 mobileNavbarLink" href="#">Merchandise</a>
+          <a class="mt-4 mobileNavbarLink" href="#">Sponsor</a>
         </div>
         
     </div>
@@ -101,53 +106,93 @@
       justify-content: center;
       justify-items: center;
     }
-    /* .navbar {
-      position: relative;
-      z-index: 1;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    height: 5vh; */
-    /* backgroun-color: rgba(255, 255, 255, 0.185); */
-    
-    /* background-image: url(./assets/5.jpg); */
-    /* background-size: cover; */
-    /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
-  /* } */
-  /* .navbar-left{
-    height: 50%;
-    padding: 0px;
-    margin: 0px;
+   
+  #checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
+}
+
+.bars {
+  width: 100%;
+  height: 5px;
+  background-color: #EC9420;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1,#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+  .mobileNavbarLink {
+    /* */
+    width: 15rem;
+    font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 80px #1C9C8C;
   }
-  .navbar-right{
-    height: 50%;
-    padding: 0px;
-    margin: 0px;
-  } */
-  
-  /* .navbar h1 {
-    font-size: 36px;
-    margin: 10px;
-    color: #333;
-  } */
-  
-  .navbarLink {
+
+  .navbarLink{
     color: #DC3C34;
     text-decoration: none;
-    margin:60px;
-    font-size: 3vh;
+    margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
     transition: color 0.3s ease;
-    font-weight: bold;
+    font-weight: bold; 
   }
   
-  .navbarLink:hover {
-    color: #EC9420;
-  }
 
-
-
- 
-  
   .shape{
     z-index: 2;
     position: relative;
@@ -174,4 +219,5 @@
       align-items: center;
       justify-content: center;
   }
+
 </style>
