@@ -2,7 +2,12 @@
 node_modules
 /src
 /public
-
+./package.json
+./oackage-lock.json
+./jsconfig.json
+./babel.config.js
+./tailwind.config.js
+./vue.config.js
 
 
 # local env files
