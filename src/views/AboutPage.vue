@@ -1,14 +1,18 @@
 <template>
     <h1>About Us</h1>
+    <axiosTest />
 </template>
 
 <script>
     export default {
-name: 'fooTer',
+name: 'AboutPage',
 props: {
     msg: String
 }
     }
+</script>
+<script setup>
+    import axiosTest from '../components/axiosTest.vue';
 </script>
 
 <style scoped>
