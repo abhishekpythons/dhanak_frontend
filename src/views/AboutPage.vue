@@ -1,6 +1,5 @@
 <template>
     <h1>About Us</h1>
-    <axiosTest />
 </template>
 
 <script>
@@ -12,7 +11,6 @@ props: {
     }
 </script>
 <script setup>
-    import axiosTest from '../components/axiosTest.vue';
 </script>
 
 <style scoped>
