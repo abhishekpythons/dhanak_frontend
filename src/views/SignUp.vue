@@ -1,8 +1,8 @@
 <template>
-  <div class=" grid justify-center items-center" style="margin: 2rem;">
-    <h1 >
-        SignUp
-    </h1>
+  <div class=" grid justify-center items-center">
+    <header class="p-4">
+        <h1>Sign Up</h1>
+      </header>
         <div class="container" >
     <div class="form_area" style="box-shadow: 0px 0px 40px #1C9C8C; margin: 2rem;">
         <p class="title">SIGN UP</p>

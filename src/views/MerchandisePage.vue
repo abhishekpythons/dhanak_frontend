@@ -1,7 +1,7 @@
 <template>
-    <h1>
-        Merchandise
-    </h1>
+    <header class="p-4">
+        <h1>MerchandiseS</h1>
+      </header>
 </template>
 
 <script>

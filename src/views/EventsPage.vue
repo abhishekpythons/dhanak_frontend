@@ -1,6 +1,6 @@
 <template>
     <div>
-      <header class=" p-4">
+      <header class="p-4">
         <h1 class="event-title">Events</h1>
       </header>
       <div class=" flex items-center justify-center">

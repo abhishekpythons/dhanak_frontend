@@ -1,5 +1,7 @@
 <template>
-    <h1>About Us</h1>
+    <header class="p-4">
+        <h1>About US</h1>
+      </header>
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 <template>
     
-    <div class=" grid justify-center items-center" style="margin: 2rem;">
-        <h1>
-        LogIn
-    </h1>
+    <div class=" grid justify-center items-center">
+      <header class="p-4">
+        <h1>Log In</h1>
+      </header>
     <form class="form" style=" margin: 2rem; box-shadow: 0px 0px 40px #1C9C8C;">
     <div class="flex-column">
       <label>Email </label></div>

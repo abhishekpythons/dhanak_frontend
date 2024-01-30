@@ -1,8 +1,8 @@
 <!-- src/views/EventDetailPage.vue -->
 <template>
     <div>
-      <header class="bg-gray-800 text-white p-4">
-        <router-link to="/" class="text-white">Back to Events</router-link>
+      <header class="p-4">
+        <router-link to="/events" class="back-title">Back to Events</router-link>
       </header>
       <div class="container mx-auto mt-8">
         <div class="max-w-2xl mx-auto">
@@ -40,5 +40,10 @@
   
   <style scoped>
   /* Add any additional styles here */
+  .back-title{
+    font-size: 48px;
+    font-family: 'Kamikaze3DGradient';
+    color: rgb(219, 138, 17);
+  }
   </style>
   
