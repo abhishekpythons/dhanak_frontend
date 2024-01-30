@@ -23,14 +23,14 @@
 
             <!-- Navigation Links -->
             <div class="hidden md:flex items-center justify-evenly mt-12" style=" height: 12vh; width:100%;">
-              <a class="navbarLink" href="#sponsors">Sponsors</a>
-              <a class="navbarLink" href="#sponsors">Mentors</a>
-              <a class="navbarLink" href="#events">  Events</a>
-              <a href="">
+              <a class="navbarLink" href="http://64.227.143.215/api/sponsors/">Sponsors</a>
+              <a class="navbarLink" href="http://64.227.143.215/api/sponsors/">Mentors</a>
+              <a class="navbarLink" href="http://64.227.143.215/api/events/">  Events</a>
+              <a href="https://dhanak.iist.org.in">
                 <img height="140vh" width="130vh" src="./assets/dhanak_logo.png">
               </a>
-              <a  class="navbarLink" href="#signup">SignUp</a>
-              <a class="navbarLink" href="#login">LogIn</a>       
+              <a  class="navbarLink" href="http://64.227.143.215/admin/login/?next=/admin/">SignUp</a>
+              <a class="navbarLink" href="http://64.227.143.215/admin/login/?next=/admin/">LogIn</a>       
               <a class="navbarLink" href="#login">Merchandise</a>       
             </div>
 
