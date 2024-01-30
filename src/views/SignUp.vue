@@ -1,9 +1,10 @@
 <template>
-    <h1>
-        SignUp Page
+  <div class=" grid justify-center items-center" style="margin: 2rem;">
+    <h1 >
+        SignUp
     </h1>
-        <div class="container">
-    <div class="form_area">
+        <div class="container" >
+    <div class="form_area" style="box-shadow: 0px 0px 40px #1C9C8C; margin: 2rem;">
         <p class="title">SIGN UP</p>
         <form action="">
             <div class="form_group">
@@ -20,11 +21,12 @@
             </div>
             <div>
                 <button class="btn">SIGN UP</button>
-                <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
+                <p>Have an Account? <router-link class="link" to="/login">Log In</router-link></p><a class="link" href="">
             </a></div><a class="link" href="">
         
     </a></form></div><a class="link" href="">
 </a></div>
+</div>
 </template>
 
 <script>
