@@ -4,32 +4,44 @@
             <div style=" display: flex; justify-content: space-around; margin:10px; justify-items: center; background-color: #000000;">
               <div class="container sm:grid-col-1 sm:justify-center xl:flex xl:justify-around lg:flex lg:justify-around md:flex md:justify-around">
                 <div class=" md:w-1/2 lg:w-1/3 xl:w-1/3 mt-4 ">
-                <h2 class="mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white" style="margin-bottom: 1rem;">Links</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium" >
                           <li>
-                              <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            <router-link class="hover:underline" to="/">Home</router-link>
                           </li>
                           <li>
-                              <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            <router-link class="hover:underline" to="/about">About</router-link>
+                          </li>
+                          <li>
+                            <router-link class="hover:underline" to="/events">Events</router-link>
+                          </li>
+                          <li>
+                            <router-link class="hover:underline" to="/login">Log In</router-link>
+                          </li>
+                          <li>
+                            <router-link class="hover:underline" to="/signup">Sign Up</router-link>
+                          </li>
+                          <li>
+                            <router-link class="hover:underline" to="/merchandise">Merchandise</router-link>
                           </li>
                       </ul>
                 </div>
                 <div class="md:w-1/2 lg:w-1/3 xl:w-1/3 mt-4">
                   <div style="background-color: #000000;">
-                      <h2 class=" mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                      <h2 class=" mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white" style="margin-bottom: 1rem;" >Follow us</h2>
                       <ul class="text-gray-500 dark:text-gray-400 font-medium">
                           <li>
-                              <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                              <a href="https://www.instagram.com/dhanak.iist/" target="_blank" class="hover:underline ">Instagram</a>
                           </li>
                           <li>
-                              <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                              <a href="https://www.facebook.com/iist.dhanak" target="_blank" class="hover:underline">Facebook</a>
                           </li>
                       </ul>
                   </div>
                 </div>
                 <div class="md:w-1/2 lg:w-1/3 xl:w-1/3 mt-4" >
                   <div style="background-color: #000000;">
-                      <h2 class=" mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                      <h2 class=" mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white" style="margin-bottom: 1rem;">Legal</h2>
                       <ul class="text-gray-500 dark:text-gray-400 font-medium">
                           <li>
                               <a href="#" class="hover:underline">Privacy Policy</a>

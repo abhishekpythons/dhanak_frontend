@@ -1,36 +1,12 @@
 <template>
-  <navBar />
-  <commingSoon />
-  <div>
-    <div class="subHeading mt-4">
-      <a href="/"><button >Events</button></a>
-    </div>
-    
-    <div class="events">
-      <EventsCard />
-    </div>
-  </div>
-  <div>
-    <div class="subHeading">
-      <a href="/"><button >Mentors</button></a>
-    </div>
-    <div class="events">
-      
-    </div>
-  </div>
-  <axiosTest />
-  <fooTer />
+  <NavBar />
+  <router-view/>
+  <FooTer />
 </template>
 
 <script setup>
-// import BackGround from './components/BackGround.vue'
-  import EventsCard from './components/EventsCard.vue'
   import NavBar from './components/NavBar.vue'
-  // import eventsHeading from './components/eventsHeading.vue'
-  // import mentorsHeaing from './components/mentorsHeading.vue'
   import FooTer from './components/FooTer.vue'
-  import commingSoon from './components/comingSoon.vue'
-  import axiosTest from './components/axiosTest.vue'
 </script>
 
 

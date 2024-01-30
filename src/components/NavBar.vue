@@ -1,37 +1,18 @@
 <template>
-  <!-- <div class="logo">
-    <div class="shape">
-      <img id="myClickableHeading" src="./assets/dhanak_logo.png"> 
-    </div>
-  </div> -->
-  <!-- <div class="sm:grid-cols-1">
-    <nav class="navbar">
-        <div class="navbar-left">
-          <a href="#events">Events</a>
-          <a href="#sponsors">Sponsors</a>
-        </div>
-        
-        
-      <div class="navbar-right">
-        <a href="#signup">Sign Up</a>
-        <a href="#login">Log In</a>
-      </div>
-    </nav>
-    </div> -->
   <nav class="p-1" style=" position: relative; top: 0px; width:100%;">
         <div class="container mx-auto flex items-center ">
-
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center justify-evenly mt-12" style=" height: 12vh; width:100%;">
-              <a class="navbarLink" href="#sponsors">Sponsors</a>
-              <a class="navbarLink" href="#sponsors">Mentors</a>
-              <a class="navbarLink" href="#events">  Events</a>
-              <a href="">
+            <div class="hidden md:flex items-center justify-around mt-12" style=" height: 12vh; width:100%;">
+              <!-- <a class="navbarLink" href="#sponsors">Sponsors</a> -->
+              <router-link class="navbarLink" to="/">Home</router-link>
+              <router-link class="navbarLink" to="/about">About</router-link>
+              <router-link class="navbarLink" to="/events">Events</router-link>
+              <router-link class="navbarLink" to="/">
                 <img height="140vh" width="130vh" src="./assets/dhanak_logo.png">
-              </a>
-              <a  class="navbarLink" href="#signup">SignUp</a>
-              <a class="navbarLink" href="#login">LogIn</a>       
-              <a class="navbarLink" href="#login">Merchandise</a>       
+              </router-link>
+              <router-link class="navbarLink" to="/signup">SignUp</router-link>
+              <router-link class="navbarLink" to="/login">LogIn</router-link>
+              <router-link class="navbarLink" to="/merchandise">Merch</router-link>     
             </div>
 
             <!-- Hamburger Menu for Small Screens -->
@@ -39,22 +20,18 @@
                 style=" width:100%; margin-top: 10px;">
                 <div style="width: 36px; height: 32px;">
                 </div>
-                
-                <a href="#" style="z-index: 3; !important">
-                  <img height="130vh" width="120vh" src="./assets/dhanak_logo.png">
-                </a>
-                  <button id="mobile-menu-btn" style=" z-index: 3;" @click="toggleMobileMenu();"
+                  <router-link class="navbarLink" to="/" style="z-index: 3; !important">
+                    <img height="130vh" width="120vh" src="./assets/dhanak_logo.png">
+                  </router-link>
+                  <button id="mobile-menu-btn" style=" z-index: 3;"
                     class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                    <input id="checkbox" type="checkbox">
-    <label @click="toggleMobileMenu();" class="toggle" for="checkbox">
-        <div id="bar1" class="bars"></div>
-        <div id="bar2" class="bars"></div>
-        <div id="bar3" class="bars"></div>
-    </label>
-                </button>
-                
-                  
-                
+                    <input id="checkbox" type="checkbox" v-model="isMobileMenuVisible" @click="toggleMobileMenu();">
+                      <label class="toggle" for="checkbox">
+                          <div id="bar1" class="bars"></div>
+                          <div id="bar2" class="bars"></div>
+                          <div id="bar3" class="bars"></div>
+                      </label>
+                  </button>
             </div>
         </div>
     </nav>
@@ -63,13 +40,13 @@
     <div v-show="isMobileMenuVisible"
         class=" md:hidden w-full left-0 right-0 grid items-center justify-center"
         style=" position: absolute; top:0; height:100%; z-index: 2; background-color: rgb(0, 0, 0);">
-        <div class="grid"> 
-          <a class="mt-4 mobileNavbarLink" href="#">Sign up</a>
-          <a class="mt-4 mobileNavbarLink" href="#">Mentors</a>
-          <a class="mt-4 mobileNavbarLink" href="#">Events</a>
-          <a class="mt-4 mobileNavbarLink" href="#">Log in</a>
-          <a class="mt-4 mobileNavbarLink" href="#">Merchandise</a>
-          <a class="mt-4 mobileNavbarLink" href="#">Sponsor</a>
+        <div class="grid">
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/">Home</router-link>
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/about">About</router-link>
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/events">Events</router-link>
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/signup">SignUp</router-link>
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/login">LogIn</router-link>
+          <router-link @click="toggleMobileMenu();" class="mt-4 mobileNavbarLink" to="/merchandise">Merchandise</router-link>   
         </div>
         
     </div>
@@ -87,7 +64,7 @@
     toggleMobileMenu() {
       this.isMobileMenuVisible = !this.isMobileMenuVisible;
     },
-  },
+  }
 };
 </script>
 
@@ -174,19 +151,20 @@
   outline: none;
   border-radius: 0.4rem;
   cursor: pointer;
+  font-family: 'forgotten-futurist-bd';
   text-transform: uppercase;
   background-color: rgb(14, 14, 26);
-  color: rgb(234, 234, 234);
-  font-weight: 700;
-  transition: 0.6s;
-  box-shadow: 0px 0px 80px #1C9C8C;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  box-shadow: 0px 0px 60px #1C9C8C;
   }
 
   .navbarLink{
     color: #DC3C34;
     text-decoration: none;
     margin-bottom: 1.2rem;
-  font-size: 1.5rem;
+    font-family: 'forgotten-futurist-bd';
+  font-size: 1.7rem;
   font-weight: 500;
     transition: color 0.3s ease;
     font-weight: bold; 
@@ -212,6 +190,13 @@
       font-weight: normal;
       font-style: normal;
     }
+  @font-face {
+      font-family: 'forgotten-futurist-bd';
+      src: url('./fonts/forgotten-futurist-bd.otf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
 
   .mobileLogo{
       width: 100%;
