@@ -33,7 +33,7 @@
     },
     mounted() {
       // Make a GET request when the component is mounted
-      axios.get('http://backend.abhishekverma.me/api/events/?format=json', {
+      axios.get('https://backend.abhishekverma.me/api/events/?format=json', {
         headers: {
           'Content-Type': 'application/json'
         },

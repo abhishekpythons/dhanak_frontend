@@ -28,7 +28,7 @@
     methods: {
       async fetchEventData(id) {
         try {
-          const response = await this.axios.get(`http://backend.abhishekverma.me/api/events/?format=json${id}`);
+          const response = await this.axios.get(`https://backend.abhishekverma.me/api/events/?format=json${id}`);
           this.event = response.data;
         } catch (error) {
           console.error('Error fetching event data:', error);
