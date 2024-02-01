@@ -9,14 +9,6 @@
         <EventsCard />
       </div>
     </div>
-    <div>
-      <div class="subHeading">
-        <a href="/"><button >Mentors</button></a>
-      </div>
-      <div class="events">
-        
-      </div>
-    </div>
   </template>
   
   <script setup>

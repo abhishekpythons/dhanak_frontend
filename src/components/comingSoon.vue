@@ -1,10 +1,10 @@
 <!-- ComingSoon.vue -->
 <template>
     <div style="margin-top: 1em;" class="grid justify-center items-center">
-        <h1 style="font-size: 3rem; color:#EC9420;">
+        <h1 style="font-size: 3rem; color: #EC9420;">
             16 to 18th
         </h1>
-        <h1 style="font-size: 3rem; color:#EC9420;">
+        <h1 style="font-size: 3rem; color: #EC9420;">
           March 
         </h1>
         <dhanakLoader />

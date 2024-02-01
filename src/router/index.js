@@ -25,9 +25,10 @@ const routes = [
     component: EventsPage
   },
   {
-    path: '/eventpage',
+    path: '/eventpage/:eventID',
     name:'EventPage',
-    component: EventPage
+    component: EventPage,
+    props: true, // Enables passing route params as props
   },
   {
     path: '/login',

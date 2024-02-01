@@ -7,18 +7,18 @@
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 mx-2 my-4">
       <!-- Event Cards -->
       <div v-for="item in apiData" :key="item.id" class="event-card overflow-hidden">
-        <div class="eventImage">
-            <router-link to="/eventpage">
+        <div @click="navigateToChild(item.id)" class="eventImage">
+            <router-link to="/eventpage/:eventID">
                 <img :src="item.image" :alt="`Event ${index + 1}`" style="border-radius: 5%;" >
                 <h1 class="event-name" >
                 {{ item.name }}
                 </h1>
             </router-link>
-            
         </div>
       </div>
     </div>
     </div>
+    <!-- <EventPage :messageFromParent="parentMessage" /> -->
     </div>
   </template>
   
@@ -32,7 +32,6 @@
       };
     },
     mounted() {
-      // Make a GET request when the component is mounted
       axios.get('https://backend.abhishekverma.me/api/events/?format=json', {
         headers: {
           'Content-Type': 'application/json'
@@ -47,6 +46,12 @@
           console.error('Error fetching data:', error);
         });
     },
+    methods: {
+    navigateToChild(int) {
+      // Use this.$router.push to navigate to the child page
+      this.$router.push({ name: 'EventPage', params: { eventID: int } });
+    },
+  },
   };
   </script>
   

@@ -3,8 +3,8 @@
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 mx-2 my-4">
       <!-- Event Cards -->
       <div v-for="item in apiData" :key="item.id" class="event-card overflow-hidden mx-2 my-4">
-        <div class="eventImage">
-          <router-link to="/eventpage">
+        <div @click="navigateToChild(item.id)" class="eventImage">
+          <router-link to="/eventpage/:eventID">
                 <img :src="item.image" :alt="`Event ${index + 1}`" style="border-radius: 5%;" >
                 <h1 class="event-name" >
                 {{ item.name }}
@@ -41,6 +41,12 @@ import axios from 'axios';
           console.error('Error fetching data:', error);
         });
     },
+    methods: {
+    navigateToChild(int) {
+      // Use this.$router.push to navigate to the child page
+      this.$router.push({ name: 'EventPage', params: { eventID: int } });
+    },
+  },
   };
 </script>
 

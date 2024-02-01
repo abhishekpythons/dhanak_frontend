@@ -17,10 +17,10 @@
 
             <!-- Hamburger Menu for Small Screens -->
             <div class="md:hidden flex items-center justify-around" 
-                style=" width:100%; margin-top: 10px;">
+                style=" width:100%; margin-top: 2rem;">
                 <div style="width: 36px; height: 32px;">
                 </div>
-                  <router-link class="navbarLink" to="/" style="z-index: 3; !important">
+                  <router-link @click="toggleMobileMenu();" to="/" style="z-index: 3; !important">
                     <img height="130vh" width="120vh" src="./assets/dhanak_logo.png">
                   </router-link>
                   <button id="mobile-menu-btn" style=" z-index: 3;"
